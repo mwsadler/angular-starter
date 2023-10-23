@@ -1,0 +1,37 @@
+<div class="container">
+  <p>test-component works!</p>
+  <mat-slide-toggle>Toggle me!</mat-slide-toggle>
+  <mat-slider min="1" max="100" step="1" ><input matSliderThumb [(ngModel)]="value" #slider></mat-slider>
+  <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle value="bold">Bold</mat-button-toggle>
+    <mat-button-toggle value="italic">Italic</mat-button-toggle>
+    <mat-button-toggle value="underline">Underline</mat-button-toggle>
+  </mat-button-toggle-group>
+  <mat-chip-listbox aria-label="Fish selection">
+    <mat-chip-option>One fish</mat-chip-option>
+    <mat-chip-option>Two fish</mat-chip-option>
+    <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
+    <mat-chip-option color="warn">Warn fish</mat-chip-option>
+  </mat-chip-listbox>
+  <mat-form-field class="example-full-width">
+    <mat-label>Enter Stock</mat-label>
+    <input matInput placeholder="VFV.TO"  [(ngModel)]='stock'>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Leave a comment</mat-label>
+    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+  </mat-form-field>
+  <button mat-button (click)="getStockPrice()" >Search</button>
+  <mat-card>
+    <mat-card-content>Stock price: {{stockPrice}} for {{stock}}</mat-card-content>
+  </mat-card>
+  <mat-form-field class="example-full-width">
+    <mat-label>Enter Stock</mat-label>
+    <input matInput placeholder="VFV.TO"  [(ngModel)]='gasPrice'>
+  </mat-form-field>
+  <button mat-button (click)="sendGasPrice()" >Send gas price</button>
+  <mat-card>
+    <mat-card-content>{{listeGasPrice}}</mat-card-content>
+  </mat-card>
+</div>

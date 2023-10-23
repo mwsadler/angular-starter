@@ -1,0 +1,39 @@
+<div class="component" >
+  <div class="add-stock">
+    <span *ngIf="addStockMessage !== null">
+      {{addStockMessage}}
+    </span>
+    <mat-form-field>
+      <mat-label>Select</mat-label>
+      <mat-select  [(ngModel)]="account">
+        <mat-option value="CELI">CELI</mat-option>
+        <mat-option value="REER">REER</mat-option>
+        <mat-option value="CELIAPP">CELIAPP</mat-option>
+        <mat-option value="CASH">CASH</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Stock symbol</mat-label>
+      <input matInput [(ngModel)]="stockSymbol">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Stock count</mat-label>
+      <input matInput [(ngModel)]="stockCount">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Average price</mat-label>
+      <input matInput [(ngModel)]="averagePrice">
+    </mat-form-field>
+    <button mat-button (click)="AddStock()" >Add stock</button>
+  </div>
+  <div class="check-validity" >
+    <span *ngIf="symbolValidityMessage !== null">
+      {{symbolValidityMessage}}
+    </span>
+    <mat-form-field>
+      <mat-label>Symbol</mat-label>
+      <input matInput [(ngModel)]="checkSymbol">
+    </mat-form-field>
+    <button mat-button (click)="checkValidity()" >Check validity of symbol</button>
+  </div>
+</div>

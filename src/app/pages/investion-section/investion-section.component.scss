@@ -1,0 +1,23 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-sidenav-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-container{
+  height: -webkit-fill-available;
+}
+
+.example-sidenav {
+  padding: 20px;
+  width: max-content;
+}
+
+.sidenav-button {
+  margin: 0.4rem;
+}
+

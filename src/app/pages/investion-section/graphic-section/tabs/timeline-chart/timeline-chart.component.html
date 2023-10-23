@@ -1,0 +1,27 @@
+<div class="page" >
+  <div *ngIf="isLoading">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div [hidden]="isLoading" >
+    <div class="account-select" >
+      <mat-form-field>
+        <mat-label>Select account</mat-label>
+        <mat-select (selectionChange)="onSelectionChange($event)" >
+          <mat-option value="TOTAL">ALL</mat-option>
+          <mat-option value="CELI">CELI</mat-option>
+          <mat-option value="REER">REER</mat-option>
+          <mat-option value="CELIAPP">CELIAPP</mat-option>
+          <mat-option value="CASH">CASH</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <highcharts-chart
+      [Highcharts]="Highcharts"
+      [constructorType]="'stockChart'"
+      [options]="chartOptions"
+      [(update)]="updateFlag"
+    >
+
+    </highcharts-chart>
+  </div>
+</div>

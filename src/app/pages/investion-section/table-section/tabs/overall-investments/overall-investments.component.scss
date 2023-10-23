@@ -1,0 +1,27 @@
+.positive {
+  background-color: rgba(0, 128, 0, 0.15);
+}
+
+.negative {
+  background-color: rgba(255, 0, 0, 0.14);
+}
+
+.day-total {
+  width: fit-content;
+  margin-right: 2rem;
+}
+
+.table {
+  margin-top: 0rem;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.top-row {
+  display: flex;
+  flex-direction: row;
+}

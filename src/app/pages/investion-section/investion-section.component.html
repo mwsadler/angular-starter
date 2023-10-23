@@ -1,0 +1,35 @@
+<p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+
+    <button mat-icon-button class="example-icon" aria-label="logout" [routerLink]="['login']">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="over">
+    <div style=" display: flex; flex-direction: column;" >
+
+      <button mat-raised-button [routerLink]="['stock']" (click)="drawer.toggle()" class="sidenav-button" >
+        See investments table
+      </button>
+
+      <button mat-raised-button [routerLink]="['input']" (click)="drawer.toggle()" class="sidenav-button">
+        Manage investments
+      </button>
+
+      <button mat-raised-button [routerLink]="['graphic']" (click)="drawer.toggle()" class="sidenav-button">
+        Graphic
+      </button>
+
+    </div>
+  </mat-drawer>
+
+  <router-outlet></router-outlet>
+
+</mat-drawer-container>
